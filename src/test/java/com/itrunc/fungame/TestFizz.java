@@ -19,7 +19,15 @@ public class TestFizz {
             caculatorChain.caculate(numberPlaceholder);
             Assert.assertEquals(FizzCaculator.FIZZ, numberPlaceholder.placeholder);
 
-            numberPlaceholder = new NumberPlaceholder(2);
+            numberPlaceholder = new NumberPlaceholder(30);
+            caculatorChain.caculate(numberPlaceholder);
+            Assert.assertEquals(FizzCaculator.FIZZ, numberPlaceholder.placeholder);
+
+            numberPlaceholder = new NumberPlaceholder(5);
+            caculatorChain.caculate(numberPlaceholder);
+            Assert.assertNotEquals(FizzCaculator.FIZZ, numberPlaceholder.placeholder);
+
+            numberPlaceholder = new NumberPlaceholder(31);
             caculatorChain.caculate(numberPlaceholder);
             Assert.assertNotEquals(FizzCaculator.FIZZ, numberPlaceholder.placeholder);
 
