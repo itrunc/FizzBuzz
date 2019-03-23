@@ -2,20 +2,21 @@ package com.itrunc.fungame.conversion;
 
 public abstract class Caculator<T> {
 
-    protected Caculator<T> subCalculator;
+    protected Caculator<T> subCaculator;
 
-    public void setSubCalculator(Caculator<T> subCaculator) {
-        this.subCalculator = subCaculator;
+    public void setSubCaculator(Caculator<T> subCaculator) {
+        this.subCaculator = subCaculator;
     }
 
     public final T caculate(T obj) throws Exception {
         T tmpObj = this.doCaculation(obj);
 
         if (null != tmpObj) {
-            if (null == subCalculator) {
+            if (null == subCaculator) {
                 return tmpObj;
             } else {
-                return subCalculator.caculate(tmpObj);
+                //Recursive caculation
+                return subCaculator.caculate(tmpObj);
             }
         }
 

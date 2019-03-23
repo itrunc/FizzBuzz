@@ -26,7 +26,7 @@ public class FizzBuzzProcessor {
         FizzCaculator fizzCaculator = new FizzCaculator();
         BuzzCaculator buzzCaculator = new BuzzCaculator();
 
-        fizzCaculator.setSubCalculator(buzzCaculator);
+        fizzCaculator.setSubCaculator(buzzCaculator);
 
         Caculator<NumberPlaceholder> caculatorChain = fizzCaculator;
 
@@ -47,7 +47,7 @@ public class FizzBuzzProcessor {
         Fizz2Caculator fizzCaculator = new Fizz2Caculator();
         Buzz2Caculator buzzCaculator = new Buzz2Caculator();
 
-        fizzCaculator.setSubCalculator(buzzCaculator);
+        fizzCaculator.setSubCaculator(buzzCaculator);
 
         Caculator<NumberPlaceholder> caculatorChain = fizzCaculator;
 
