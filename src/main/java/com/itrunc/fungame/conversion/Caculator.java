@@ -11,6 +11,7 @@ public abstract class Caculator<T> {
     public final T caculate(T obj) throws Exception {
         T tmpObj = this.doCaculation(obj);
 
+        //Caculate for the object until there isn't sub caculator in the chain
         if (null != tmpObj) {
             if (null == subCaculator) {
                 return tmpObj;

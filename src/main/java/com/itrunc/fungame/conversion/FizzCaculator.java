@@ -8,6 +8,7 @@ public class FizzCaculator extends Caculator<NumberPlaceholder> {
     
     @Override
     protected NumberPlaceholder doCaculation(NumberPlaceholder obj) {
+        //Set placeholder as Fizz if the number is divisible by 3
         if (obj.num % 3 == 0) {
             obj.placeholder += FIZZ;
         }
