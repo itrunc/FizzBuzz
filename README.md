@@ -37,3 +37,14 @@ Buzz
 * A number is Fizz if it is divisible by 3 or if it has a 3 in it
 * A number is Buzz if it is divisible by 5 or if it has a 5 in it
 * A number is FizzBuzz if it satisfy above 2 criterias together
+  
+# How to build and run for the results
+
+Suppose you have setup Maven environment.
+
+Clone or download the project, then access to the project and run below commands
+
+```sh
+mvn package
+java -cp ./target/fizzbuzz-1.0.0.SNAPSHOT.jar com.itrunc.fungame.FizzBuzzProcessor
+```
