@@ -9,6 +9,10 @@ public class NumberPlaceholder {
         this.placeholder = "";
     }
 
+    public void show() {
+        System.out.println("".equals(placeholder) ? num : placeholder);
+    }
+
     @Override
     public String toString() {
         return "NumberPlaceholder [number=" + num + ", placeholder=" + placeholder + "]";

@@ -28,17 +28,14 @@ public class FizzBuzzProcessor {
 
         fizzCaculator.setSubCaculator(buzzCaculator);
 
+        //Chain： Fizz -> Buzz
         Caculator<NumberPlaceholder> caculatorChain = fizzCaculator;
 
         int loop = 1;
         while (loop <= 100) {
             NumberPlaceholder numberPlaceholder = new NumberPlaceholder(loop);
             caculatorChain.caculate(numberPlaceholder);
-            if ("".equals(numberPlaceholder.placeholder)) {
-                System.out.println(numberPlaceholder.num);
-            } else {
-                System.out.println(numberPlaceholder.placeholder);
-            }
+            numberPlaceholder.show();
             loop++;
         }
     }
@@ -49,17 +46,14 @@ public class FizzBuzzProcessor {
 
         fizzCaculator.setSubCaculator(buzzCaculator);
 
+        //Chain: Fizz2 -> Buzz2
         Caculator<NumberPlaceholder> caculatorChain = fizzCaculator;
 
         int loop = 1;
         while (loop <= 100) {
             NumberPlaceholder numberPlaceholder = new NumberPlaceholder(loop);
             caculatorChain.caculate(numberPlaceholder);
-            if ("".equals(numberPlaceholder.placeholder)) {
-                System.out.println(numberPlaceholder.num);
-            } else {
-                System.out.println(numberPlaceholder.placeholder);
-            }
+            numberPlaceholder.show();
             loop++;
         }
     }
